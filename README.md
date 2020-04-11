@@ -1,8 +1,6 @@
 # Shufflino
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/shufflino`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Generates random-looking like strings from shuffled seed arrays
 
 ## Installation
 
@@ -22,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+seeds = [[:f, :m, :e, :W], [:U, :t, 3, :Q], [9, :S, :j, :w]]
+shufflino = Shufflino::Core.new(seeds)
+shufflino.generate(0) # =>"fU9"
+shufflino.generate(63) # => "WQw"
+shufflino.generate(64) # Raises error (Not enough seeds)
+```
 
 ## Development
 
@@ -32,12 +36,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/shufflino. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/inem/shufflino. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Shufflino project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/shufflino/blob/master/CODE_OF_CONDUCT.md).

@@ -9,6 +9,11 @@ publish:
 	gem push pkg/*.gem
 	rm pkg/*.gem
 
+console:
+	bin/console
+
+c: console
+
 push:
 	git push origin master
 
