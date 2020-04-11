@@ -12,8 +12,8 @@ publish:
 push:
 	git push origin master
 
-default: test build publish
+all: test build publish
 
-.DEFAULT_GOAL := default
+.DEFAULT_GOAL := all
 
 .PHONY: test

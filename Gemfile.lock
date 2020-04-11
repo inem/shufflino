@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    shufflino (0.1.0)
+    shufflino (0.1.1)
 
 GEM
   remote: https://rubygems.org/
