@@ -11,40 +11,56 @@ class ShufflinoTest < Minitest::Test
     end
   end
 
-  # def test_accepts_strings
-  #   seeds = ['fm8','Utq']
-  #   shufflino = Shufflino::Core.new(seeds)
+  def test_accepts_strings
+    seeds = ['fm8','Utq']
+    shufflino = Shufflino::Core.new(seeds)
 
-  #   assert { shufflino.generate(0) == "fU" }
-  # end
+    assert { shufflino.generate(0) == "fU" }
+  end
 
-  # def test_works_with_long_strings
-  #   seeds = ['mhVvn8SwHFctIlyuQrMb1fBTJWoxG4k9RPA5']
-  #   # seeds = ['mhVvn8SwHFctIlyuQrMb1fBTJWoxG4k9RPA53aKe0gOpXis6zjDUdYZCL7qE2N']
-  #   shufflino = Shufflino::Core.new(seeds)
+  def test_works_with_long_strings
+    seeds = ['mhVvn8SwHFctIlyuQrMb1fBTJWoxG4k9RPA5']
+    # seeds = ['mhVvn8SwHFctIlyuQrMb1fBTJWoxG4k9RPA53aKe0gOpXis6zjDUdYZCL7qE2N']
+    shufflino = Shufflino::Core.new(seeds)
 
-  #   assert { shufflino.generate(0) == "m" }
-  #   assert { shufflino.generate(1) == "h" }
-  #   assert { shufflino.generate(2) == "V" }
-  # end
+    assert { shufflino.generate(0) == "m" }
+    assert { shufflino.generate(1) == "h" }
+    assert { shufflino.generate(2) == "V" }
+  end
 
-  # def test_works_with_very_long_strings
-  #   seeds = ['mhVvn8SwHFctIlyuQrMb1fBTJWoxG4k9RPA53aKe0gOpXis6zjDUdYZCL7qE2N']
-  #   shufflino = Shufflino::Core.new(seeds)
+  def test_works_with_very_long_strings
+    seeds = ['mhVvn8SwHFctIlyuQrMb1fBTJWoxG4k9RPA53aKe0gOpXis6zjDUdYZCL7qE2N']
+    shufflino = Shufflino::Core.new(seeds)
 
-  #   assert { shufflino.generate(0) == "m" }
-  #   assert { shufflino.generate(1) == "h" }
-  #   assert { shufflino.generate(2) == "V" }
-  # end
+    assert { shufflino.generate(0) == "m" }
+    assert { shufflino.generate(1) == "h" }
+    assert { shufflino.generate(2) == "V" }
+  end
+
+  def test_works_with_very_long_strings_and_and_three_digits
+    seeds = [
+      "QSmhD41HVGqXbv9NLzIFiKTxeWkgZ8C67o3lE2n5UMABwpRu0PtsfdyjJraOcY",
+      "pqrGM94LRlIJ6cWUSfa0jyKkY5vAD2swhNiQmdotEgXCxz1n3OT7eubBPHFV8Z",
+      "mhVvn8SwHFctIlyuQrMb1fBTJWoxG4k9RPA53aKe0gOpXis6zjDUdYZCL7qE2N"
+    ]
+    shufflino = Shufflino::Core.new(seeds)
+
+    assert { shufflino.generate(0) == "Qpm" }
+    assert { shufflino.generate(1) == "Qph" }
+    assert { shufflino.generate(2) == "QpV" }
+    assert { shufflino.generate(62) == "Qqm" }
+
+    assert { shufflino.generate(238327) == "YZN" }
+  end
 
   def test_generates_stuff_correctly
     seeds = [[:f, :m, 8], [:U, :t, :q] ]
     shufflino = Shufflino::Core.new(seeds)
 
-    # assert { shufflino.generate(0) == "fU" }
-    # assert { shufflino.generate(1) == "ft" }
-    # assert { shufflino.generate(2) == "fq" }
-    # assert { shufflino.generate(3) == "mU" }
+    assert { shufflino.generate(0) == "fU" }
+    assert { shufflino.generate(1) == "ft" }
+    assert { shufflino.generate(2) == "fq" }
+    assert { shufflino.generate(3) == "mU" }
     assert { shufflino.generate(4) == "mt" }
     assert { shufflino.generate(5) == "mq" }
     assert { shufflino.generate(6) == "8U" }

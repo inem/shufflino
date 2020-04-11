@@ -22,7 +22,7 @@ module Shufflino
       id = id.to_i
       raise Shufflino::Error.new 'Not enough seeds!' if id > combinations_size - 1
 
-      indices = Bases[id.to_s].in_base(10).to_base(alphabet_size).split("").map(&:to_i)
+      indices = Bases[id.to_s].in_base(10).to_base(alphabet_size, array: true).map(&:to_i)
 
       indices = Array.new(id_length - indices.size, 0) + indices # rjust
 
