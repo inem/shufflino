@@ -24,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-```
+```ruby
 seeds = ['fmeW', 'Ut3Q', '9Sjw']
 shufflino = Shufflino::Core.new(seeds)
 shufflino.generate(0) # =>"fU9"
