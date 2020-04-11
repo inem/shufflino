@@ -1,8 +1,9 @@
 # Shufflino
 
-Generates random-looking like strings from shuffled seed arrays
+Generates random-looking like strings from shuffled seed arrays. Like this: "f6Erw3", "nhxi8R", "Quv8eP"
 
 Implements algorithm from this talk at RubyC 2018:
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/71r8HYaxKKM/0.jpg)](https://www.youtube.com/watch?v=71r8HYaxKKM)
 
 ## Installation
