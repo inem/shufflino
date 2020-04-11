@@ -34,4 +34,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "minitest", "~> 5.0"
   spec.add_development_dependency "pry-byebug", "~> 3.9"
   spec.add_development_dependency 'minitest-power_assert', '~> 0.3'
+
+  spec.add_dependency 'bases', '~> 1.0'
 end

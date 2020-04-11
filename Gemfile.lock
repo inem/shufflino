@@ -2,10 +2,12 @@ PATH
   remote: .
   specs:
     shufflino (0.2.1)
+      bases (~> 1.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
+    bases (1.0.2)
     byebug (11.1.1)
     coderay (1.1.2)
     method_source (1.0.0)

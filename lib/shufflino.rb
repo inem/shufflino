@@ -1,6 +1,8 @@
 require_relative "shufflino/version"
 require_relative "shufflino/helpers"
 
+require 'bases'
+
 module Shufflino
   class Error < StandardError; end
 
@@ -20,12 +22,15 @@ module Shufflino
       id = id.to_i
       raise Shufflino::Error.new 'Not enough seeds!' if id > combinations_size - 1
 
-      indices = id.to_s(alphabet_size).rjust(id_length, "0").split("")
+      indices = Bases[id.to_s].in_base(10).to_base(alphabet_size).split("").map(&:to_i)
+
+      indices = Array.new(id_length - indices.size, 0) + indices # rjust
+
       result = ""
 
       indices.each_with_index do |index, i|
         alphabet = @seeds[i]
-        result << alphabet[index.to_i].to_s
+        result << alphabet[index].to_s
       end
 
       result
