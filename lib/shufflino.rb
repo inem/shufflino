@@ -6,7 +6,11 @@ module Shufflino
 
   class Core
     def initialize(seeds)
-      @seeds = seeds
+      if seeds.first.is_a? Array
+        @seeds = seeds
+      elsif seeds.first.is_a? String
+        @seeds = seeds.map {|s| s.split("") }
+      end
 
       raise "Empty seeds array" if seeds.empty?
 

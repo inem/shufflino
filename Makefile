@@ -2,7 +2,7 @@ test:
 	rake test
 
 build:
-	rm pkg/*.gem
+	- rm pkg/*.gem
 	rake build
 
 publish:
