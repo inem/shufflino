@@ -25,7 +25,7 @@ Or install it yourself as:
 ## Usage
 
 ```
-seeds = [[:f, :m, :e, :W], [:U, :t, 3, :Q], [9, :S, :j, :w]]
+seeds = ['fmeW', 'Ut3Q', '9Sjw']
 shufflino = Shufflino::Core.new(seeds)
 shufflino.generate(0) # =>"fU9"
 shufflino.generate(63) # => "WQw"
