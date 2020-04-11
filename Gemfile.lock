@@ -20,7 +20,7 @@ GEM
     pry-byebug (3.9.0)
       byebug (~> 11.0)
       pry (~> 0.13.0)
-    rake (10.5.0)
+    rake (13.0.1)
 
 PLATFORMS
   ruby
@@ -30,7 +30,7 @@ DEPENDENCIES
   minitest (~> 5.0)
   minitest-power_assert (~> 0.3)
   pry-byebug (~> 3.9)
-  rake (~> 10.0)
+  rake (>= 12.3.3)
   shufflino!
 
 BUNDLED WITH
