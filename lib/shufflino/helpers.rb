@@ -5,7 +5,5 @@ module Shufflino
 
       num * factorial(num - 1)
     end
-
-    # def self.radix(alphabet, )
   end
 end
