@@ -1,0 +1,37 @@
+PATH
+  remote: .
+  specs:
+    shufflino (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    byebug (11.1.1)
+    coderay (1.1.2)
+    method_source (1.0.0)
+    minitest (5.14.0)
+    minitest-power_assert (0.3.1)
+      minitest
+      power_assert (>= 1.1)
+    power_assert (1.1.7)
+    pry (0.13.0)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-byebug (3.9.0)
+      byebug (~> 11.0)
+      pry (~> 0.13.0)
+    rake (10.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 2.0)
+  minitest (~> 5.0)
+  minitest-power_assert (~> 0.3)
+  pry-byebug (~> 3.9)
+  rake (~> 10.0)
+  shufflino!
+
+BUNDLED WITH
+   2.0.2
