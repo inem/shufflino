@@ -2,6 +2,9 @@
 
 Generates random-looking like strings from shuffled seed arrays
 
+Implements algorithm from this talk at RubyC 2018:
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/71r8HYaxKKM/0.jpg)](https://www.youtube.com/watch?v=71r8HYaxKKM)
+
 ## Installation
 
 Add this line to your application's Gemfile:
