@@ -32,6 +32,12 @@ shufflino.generate(63) # => "WQw"
 shufflino.generate(64) # Raises error (Not enough seeds)
 ```
 
+When using in a real app make sure to prepare "seed arrays" by running something like this:
+
+`8.times { puts [*('A'..'Z'), *('a'..'z'), *('0'..'9')].shuffle*"" }`
+
+In Rails, I'd put that into `config/initializers/shufflino.rb`.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
